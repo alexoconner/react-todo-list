@@ -1,0 +1,10 @@
+# logs
+*.log
+.DS_Store
+
+# editors
+.idea/
+
+# node and built
+node_modules/
+dist/
