@@ -1,0 +1,35 @@
+/**
+ * Navigation
+ */
+
+.navigation-wrapper {
+    position: relative;
+    background-color: @color-primary;
+    width: 100%;
+    display: flex;
+    height: @nav-height;
+}
+
+.navigation {
+    display: flex;
+    flex-grow: stretch;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+
+    li {
+        flex: 1;
+        height: @nav-height;
+
+        a {
+            color: @color-white;
+            height: 100%;
+            line-height: @nav-height;
+            height: @nav-height;
+            font-size: 1.8rem;
+            text-decoration: none;
+            padding: 0 2rem;
+        }
+    }
+}
