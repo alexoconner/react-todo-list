@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Navigation from './Components/Navigation';
-import Main from './Components/Main';
+import Navigation from './components/Navigation';
+import Main from './components/Main';
+
+import routes from './config/routes';
 
 class TodoListApp extends React.Component {
     constructor( props ) {
@@ -11,10 +14,13 @@ class TodoListApp extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navigation />
-                <Main />
-            </div>
+            <Router>
+                <div>
+                    <Navigation />
+                    { routes }
+                    {/* <Main { ...routes } /> */}
+                </div>
+            </Router>
         );
     }
 }
