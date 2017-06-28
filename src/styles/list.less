@@ -4,7 +4,6 @@
 
 .list-wrapper {
     display: block;
-    width: 100%;
     padding: 0;
 }
 
@@ -14,29 +13,27 @@
     margin: 0 0 1.6rem 0;
     padding: 0;
     list-style: none;
+    border-radius: 3px;
+    overflow: hidden;
 
     &__head {
         display: table-header-group;
         font-size: 1.2rem;
         background-color: @color-secondary;
         color: @color-white;
-
-        .list__cell {
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-        }
     }
 
     &__row {
         display: table-row;
 
-        &:nth-child(2) {
-            background-color: @color-soft;
+        &:nth-child(even) {
+            background-color: @color-very-soft;
         }
     }
 
     &__cell {
         display: table-cell;
+        font-size: 1.6rem;
         padding: 2rem 1rem;
     }
 }

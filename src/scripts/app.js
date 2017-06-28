@@ -17,7 +17,9 @@ class TodoListApp extends React.Component {
             <Router>
                 <div>
                     <Navigation />
-                    { routes }
+                    <div className="main-wrapper">
+                        { routes }
+                    </div>
                     {/* <Main { ...routes } /> */}
                 </div>
             </Router>
