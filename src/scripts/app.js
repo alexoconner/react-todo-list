@@ -8,23 +8,23 @@ import Main from './components/Main';
 import routes from './config/routes';
 
 class TodoListApp extends React.Component {
-    constructor( props ) {
-        super()
-    }
+  constructor( props ) {
+    super();
+  }
 
-    render() {
-        return (
-            <Router>
-                <div>
-                    <Navigation />
-                    <div className="main-wrapper">
-                        { routes }
-                    </div>
-                    {/* <Main { ...routes } /> */}
-                </div>
-            </Router>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <div>
+          <Navigation />
+          <div className="main-wrapper">
+            { routes }
+          </div>
+          {/* <Main { ...routes } /> */}
+        </div>
+      </Router>
+    );
+  }
 }
 
 ReactDOM.render( <TodoListApp />, document.getElementById( 'App' ) );

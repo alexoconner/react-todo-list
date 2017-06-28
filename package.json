@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rm -rf ./dist/ && mkdir ./dist",
+    "prebuild": "rm -rf ./dist/ && mkdir ./dist && npm run lint",
     "watch:styles": "watch 'npm run build:styles' ./src/styles",
     "build:styles": "lessc ./src/styles/styles.less ./dist/styles.css",
     "make:styles": "lessc ./src/styles/styles.less | cleancss > ./dist/styles.css",
@@ -15,9 +15,10 @@
     "watch:html": "watch 'npm run build:html' ./src/html",
     "build:html": "cp ./src/html/*.html ./dist/",
     "make:html": "npm run build:html",
-    "watch": "parallelshell 'npm run watch:styles' 'npm run watch:js' 'npm run watch:html'",
+    "watch": "parallelshell 'npm run watch:styles' 'npm run watch:js' 'npm run watch:html' 'live-server ./dist'",
     "build": "npm run build:html && npm run build:js && npm run build:styles",
     "make": "npm run build:js && npm run make:html && npm run make:styles",
+    "lint": "eslint ./src",
     "start": "live-server ./dist"
   },
   "repository": {
@@ -44,6 +45,9 @@
     "babelify": "^7.3.0",
     "browserify": "^11.1.0",
     "clean-css": "^3.4.3",
+    "eslint": "^4.1.1",
+    "eslint-config-react-preset": "^1.0.1",
+    "eslint-plugin-react": "^7.1.0",
     "less": "^2.5.1",
     "live-server": "^0.9.2",
     "parallelshell": "^2.0.0",
