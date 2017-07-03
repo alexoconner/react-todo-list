@@ -8,8 +8,9 @@ import Navigation from './components/Navigation';
 import Main from './components/Main';
 
 import routes from './config/routes';
+import { initialState } from './config/initialState';
 
-let store = configureStore();
+const store = configureStore(initialState);
 
 class TodoListApp extends React.Component {
   constructor(props) {
